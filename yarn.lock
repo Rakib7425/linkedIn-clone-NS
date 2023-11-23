@@ -549,6 +549,11 @@
   resolved "https://registry.npmjs.org/@types/use-sync-external-store/-/use-sync-external-store-0.0.3.tgz"
   integrity sha512-EwmlvuaxPNej9+T4v5AuBPJa2x2UOJVdjCtDHgcDqitUeOtjnJKJ+apYjVcAoBEMjKW1VVFGZLUb5+qqa09XFA==
 
+"@uiw/react-back-to-top@^1.2.3":
+  version "1.2.3"
+  resolved "https://registry.npmjs.org/@uiw/react-back-to-top/-/react-back-to-top-1.2.3.tgz"
+  integrity sha512-WdQCipzq5BuaG4tM1cgdVC2DnVl/oLaOz8mL8JIpPgqIVJAR3iVW2oEttW+jppQx7ijdtop3GnfnN+o9VoU1nQ==
+
 "@ungap/structured-clone@^1.2.0":
   version "1.2.0"
   resolved "https://registry.npmjs.org/@ungap/structured-clone/-/structured-clone-1.2.0.tgz"
