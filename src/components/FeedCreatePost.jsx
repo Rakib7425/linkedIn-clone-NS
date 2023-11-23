@@ -7,6 +7,7 @@ const FeedCreatePost = () => {
 	const dispatch = useDispatch();
 	const user = useSelector((store) => store.user.user);
 	const isSideModel_open = useSelector((store) => store.config.isSideModel_open);
+
 	const showDrawer = () => {
 		if (user) {
 			dispatch(sideModel_open());
