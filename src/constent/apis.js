@@ -2,7 +2,7 @@
 export const getPostsData = "https://academics.newtonschool.co/api/v1/linkedin/post?limit=30"; // GET
 
 // Get comments
-export const getComments = "https://academics.newtonschool.co/api/v1/linkedin/like/"; // GET
+export const getCommentsApi = "https://academics.newtonschool.co/api/v1/linkedin/like/"; // GET
 // https://academics.newtonschool.co/api/v1/linkedin/like/:postId
 export const postCommentApi = "https://academics.newtonschool.co/api/v1/linkedin/comment/"; // POST
 // https://academics.newtonschool.co/api/v1/linkedin/comment/:postId

@@ -4,7 +4,9 @@ import { postCommentApi } from "../constent/apis";
 export const postCommentHandler = async (postId, comment, userToken) => {
 	console.log(postId, comment, userToken);
 	// const pId = String(postId);
+
 	const projectId = import.meta.env.PROJECT_ID;
+
 	const response = await fetch(postCommentApi + postId, {
 		method: "POST",
 		headers: {
