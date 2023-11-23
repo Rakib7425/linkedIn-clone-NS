@@ -2,22 +2,38 @@ import { Popover } from "antd";
 import { useState } from "react";
 import { postCommentHandler } from "../utils/postCommentHandler";
 import { useSelector } from "react-redux";
+import { toast } from "react-toastify";
 
 /* eslint-disable react/prop-types */
 const PostCard = ({ post }) => {
 	const [comment, setComment] = useState("");
 	const userToken = useSelector((store) => store.user?.user?.token);
 
-	const handlePostComment = (postId) => {
-		// console.log(postId);
-		// console.log(comment);
-		postCommentHandler(postId, comment, userToken);
+	const handlePostComment = async (postId) => {
+		/* Responsible for handling the logic to post a comment on a
+		specific post. `../utils/postCommentHandler` file and handles the API request to post the comment to the server. */
+		if (userToken) {
+			const result = await postCommentHandler(postId, comment, userToken);
+			console.log(result);
+		} else {
+			toast.warn(`Login required!`);
+		}
 	};
-
+	// Same same 👆
+	const handleKeyUp = async (e, postId) => {
+		if (e.key === "Enter") {
+			if (!userToken) {
+				toast.warn(`Login required!`);
+				return;
+			}
+			const result = await postCommentHandler(postId, comment, userToken);
+			console.log(result);
+		}
+	};
 	return (
 		<div className='post'>
 			<div className='post__header'>
-				{/* <i className='material-icons sidebar__topAvatar'> */}
+				{/* <i className='material-icons sidebar__topAvatar' /> */}
 
 				<img
 					src={post?.author?.profileImage}
@@ -56,6 +72,7 @@ const PostCard = ({ post }) => {
 									placeholder='Type your comment'
 									className='p-2 pr-7 border focus:border-green-700 outline-none rounded-md'
 									onChange={(e) => setComment(e.target.value)}
+									onKeyUp={(e) => handleKeyUp(e, post?._id)}
 								/>
 								<span
 									className='text-xl -ml-7 mt-2 cursor-pointer'

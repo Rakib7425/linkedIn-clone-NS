@@ -1,3 +1,4 @@
+import { toast } from "react-toastify";
 import { postCommentApi } from "../constent/apis";
 
 export const postCommentHandler = async (postId, comment, userToken) => {
@@ -6,7 +7,6 @@ export const postCommentHandler = async (postId, comment, userToken) => {
 	const projectId = import.meta.env.PROJECT_ID;
 	const response = await fetch(postCommentApi + postId, {
 		method: "POST",
-
 		headers: {
 			Authorization: `Bearer ${userToken}`,
 			projectID: projectId,
@@ -17,6 +17,13 @@ export const postCommentHandler = async (postId, comment, userToken) => {
 		},
 	});
 	const result = await response.json();
+
 	console.log(result);
-	if (result.status === "fail") return false;
+
+	if (result.status === "fail") {
+		return false;
+	} else {
+		toast.success(result.message);
+		return result;
+	}
 };

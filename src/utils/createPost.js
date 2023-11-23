@@ -27,6 +27,7 @@ export const createPost = async (post, file, userToken) => {
 		// console.log(result);
 		if (result.status === "success") {
 			toast.success(`Successfully created a post!`);
+			// toast.success(result.message);
 			return result;
 		} else {
 			toast.warn(`Error occurred to create a post!`);

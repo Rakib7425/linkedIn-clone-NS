@@ -95,7 +95,12 @@ const SideModel_CreatePost = () => {
 						getValueFromEvent={(e) => e.fileList}
 					>
 						<Upload name='avatar' listType='picture' beforeUpload={beforeUpload}>
-							<Button>Select Image</Button>
+							<Button className='flex'>
+								<i style={{ color: "#70b5f9" }} className='material-icons mr-2'>
+									upload
+								</i>
+								Select Image
+							</Button>
 						</Upload>
 					</Form.Item>
 
