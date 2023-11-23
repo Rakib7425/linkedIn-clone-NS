@@ -21,6 +21,7 @@ export const postCommentHandler = async (postId, comment, userToken) => {
 	console.log(result);
 
 	if (result.status === "fail") {
+		toast.warn(result.message);
 		return false;
 	} else {
 		toast.success(result.message);

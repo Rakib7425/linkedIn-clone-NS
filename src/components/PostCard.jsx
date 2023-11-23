@@ -30,6 +30,7 @@ const PostCard = ({ post }) => {
 			console.log(result);
 		}
 	};
+
 	return (
 		<div className='post'>
 			<div className='post__header'>
@@ -40,10 +41,9 @@ const PostCard = ({ post }) => {
 					alt='profileImage'
 					className='h-8 w-8 rounded-full'
 				/>
-				{/* </i> */}
+
 				<div className='post__info'>
 					<h2>{post?.author?.name}</h2>
-					{/* <p>Job Description</p> */}
 					<p>{post?.channel.name}</p>
 				</div>
 			</div>
@@ -62,15 +62,15 @@ const PostCard = ({ post }) => {
 
 				<Popover
 					placement='bottom'
-					title={"Comment"}
+					title={"Type a comment :"}
 					className='flex gap-1 '
 					content={
-						<div className=''>
-							<div className='flex items-center justify-center '>
+						<div className='min-w-[40vw]'>
+							<div className='flex items-center justify-center w-full'>
 								<input
 									type='text'
 									placeholder='Type your comment'
-									className='p-2 pr-7 border focus:border-green-700 outline-none rounded-md'
+									className='p-2 pr-7 border focus:border-green-700 outline-none rounded-md w-full'
 									onChange={(e) => setComment(e.target.value)}
 									onKeyUp={(e) => handleKeyUp(e, post?._id)}
 								/>
