@@ -66,7 +66,7 @@ const SideModel_CreatePost = () => {
 				>
 					<Form.Item
 						name={["post", "title"]}
-						label='Title'
+						label='Post Title'
 						rules={[
 							{
 								required: true,
@@ -90,7 +90,7 @@ const SideModel_CreatePost = () => {
 					</Form.Item>
 					<Form.Item
 						name='image'
-						label='Image'
+						label='Post Image'
 						valuePropName='fileList'
 						getValueFromEvent={(e) => e.fileList}
 					>

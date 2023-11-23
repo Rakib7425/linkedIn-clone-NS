@@ -1,8 +1,8 @@
 import { toast } from "react-toastify";
+import { createPostApi } from "../constent/apis";
 
 export const createPost = async (post, file, userToken) => {
 	try {
-		const url = "https://academics.newtonschool.co/api/v1/linkedin/post/";
 		const projectId = import.meta.env.PROJECT_ID;
 
 		const formData = new FormData();
@@ -10,7 +10,7 @@ export const createPost = async (post, file, userToken) => {
 		formData.append("content", post?.post?.content);
 		formData.append("images", file);
 
-		const response = await fetch(url, {
+		const response = await fetch(createPostApi, {
 			method: "POST",
 			headers: {
 				Authorization: `Bearer ${userToken}`,

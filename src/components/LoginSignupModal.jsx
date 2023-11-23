@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { useState } from "react";
 import { Button, Form, Input, Modal } from "antd";
 import { handleLoginAndSignup } from "../utils/handleLoginAndSignup";
@@ -14,8 +13,6 @@ const LoginModal = () => {
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
 	const [warning, setWarning] = useState("");
-	// eslint-disable-next-line no-unused-vars
-	const [userData, setUserData] = useState([]);
 	const open = useSelector((store) => store.config.isLoginSignupModelOpen);
 
 	const dispatch = useDispatch();
@@ -34,7 +31,7 @@ const LoginModal = () => {
 				setWarning(apiResult.message);
 			} else if (apiResult.status === "success") {
 				dispatch(addUser(apiResult));
-				setUserData(apiResult);
+
 				dispatch(loginSignupModelClose());
 				toast.success(`Successfully logged in ${apiResult?.data?.name}`);
 			}
@@ -158,6 +155,12 @@ const LoginModal = () => {
 						/>
 					</Form.Item>
 				</Form>
+				{!isSignUp && (
+					<>
+						<p>{`Email-------->admin@admin.com`}</p>
+						<p>{`Password--->admin@admin.com`}</p>
+					</>
+				)}
 				{warning && (
 					<p className='text-center text-yellow-500 text-lg font-bold pb-2'>{warning}!</p>
 				)}
