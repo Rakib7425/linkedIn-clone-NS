@@ -89,10 +89,8 @@ const PostCard = ({ post }) => {
 						</div>
 					}
 				>
-					<div className='inputOption '>
-						<i style={{ color: "gray" }} className='material-icons'>
-							comment
-						</i>
+					<div className='inputOption text-[gray] hover:text-gray-700'>
+						<i className='material-icons'>comment</i>
 						<h4>Comment {post?.commentCount}</h4>
 					</div>
 				</Popover>
