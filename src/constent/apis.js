@@ -4,6 +4,7 @@ export const getPostsData = "https://academics.newtonschool.co/api/v1/linkedin/p
 // Get comments
 export const getCommentsApi = "https://academics.newtonschool.co/api/v1/linkedin/like/"; // GET
 // https://academics.newtonschool.co/api/v1/linkedin/like/:postId
+
 export const postCommentApi = "https://academics.newtonschool.co/api/v1/linkedin/comment/"; // POST
 // https://academics.newtonschool.co/api/v1/linkedin/comment/:postId
 
