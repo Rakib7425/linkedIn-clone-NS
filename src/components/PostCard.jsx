@@ -3,6 +3,7 @@ import { useState } from "react";
 import { postCommentHandler } from "../utils/postCommentHandler";
 import { useSelector } from "react-redux";
 import { toast } from "react-toastify";
+import SharePost from "./SharePost";
 
 /* eslint-disable react/prop-types */
 const PostCard = ({ post }) => {
@@ -97,10 +98,7 @@ const PostCard = ({ post }) => {
 				</Popover>
 
 				<div className='inputOption'>
-					<i style={{ color: "gray" }} className='material-icons'>
-						share
-					</i>
-					<h4>Share</h4>
+					<SharePost text={"Share"} url={post?._id} />
 				</div>
 			</div>
 		</div>
