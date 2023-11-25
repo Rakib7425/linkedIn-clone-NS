@@ -50,7 +50,7 @@ const SideModel_CreatePost = () => {
 			<Drawer
 				title='Create a Post'
 				placement='right'
-				width={"40vw"}
+				width={"500px"}
 				// className='min-w-screen'
 				onClose={onClose}
 				open={isSideModel_open}
