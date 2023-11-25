@@ -2,15 +2,22 @@ import { Link } from "react-router-dom";
 import LoginModal from "./LoginSignupModal";
 import { useDispatch, useSelector } from "react-redux";
 import UserProfile from "./UserProfile";
-import { loginSignupModelOpen } from "../store/slices/config";
+import { loginSignupModelOpen, setSearchText } from "../store/slices/config";
+import { useEffect } from "react";
+import { useState } from "react";
 
 const Header = () => {
 	// const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
 	const isLoginModalOpen = useSelector((store) => store.config.isLoginSignupModelOpen);
-
+	const [searchTextLocal, setSearchTextLocal] = useState("");
 	const user = useSelector((store) => store.user.user);
-	// console.log(user);
+
 	const dispatch = useDispatch();
+
+	useEffect(() => {
+		dispatch(setSearchText(searchTextLocal));
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [searchTextLocal]);
 
 	return (
 		<>
@@ -25,7 +32,11 @@ const Header = () => {
 					</Link>
 					<div className='header__search my-auto'>
 						<i className='material-icons -ml-3 mr-2'>search </i>
-						<input type='text' className='text-lg' />
+						<input
+							type='text'
+							className='text-lg'
+							onChange={(e) => setSearchTextLocal(e.target.value)}
+						/>
 					</div>
 				</div>
 

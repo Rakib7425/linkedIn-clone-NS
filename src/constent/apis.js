@@ -14,3 +14,5 @@ export const loginApi = "https://academics.newtonschool.co/api/v1/user/login"; /
 export const signUpApi = "https://academics.newtonschool.co/api/v1/user/signup"; // method: 'POST',
 
 export const createPostApi = "https://academics.newtonschool.co/api/v1/linkedin/post/"; // method: 'POST',
+
+export const searchPostApi = "https://academics.newtonschool.co/api/v1/linkedin/post"; // method: 'GET',

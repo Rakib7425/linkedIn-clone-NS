@@ -45,7 +45,7 @@ const PostCard = ({ post }) => {
 
 				<div className='post__info'>
 					<h2>{post?.author?.name}</h2>
-					<p>{post?.channel.name}</p>
+					<p>{post?.channel?.name}</p>
 				</div>
 			</div>
 			<h3 className='font-semibold'>Post Title: {post?.title}</h3>

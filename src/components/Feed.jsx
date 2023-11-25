@@ -4,10 +4,11 @@ import PostCard from "./PostCard";
 import { useSelector } from "react-redux";
 import Loader from "./loader/Loader";
 import FeedCreatePost from "./FeedCreatePost";
+import SearchContent from "../pages/SearchContent";
 
 const Feed = () => {
 	const [loading, setLoading] = useState(false);
-
+	const searchText = useSelector((store) => store.config.searchText);
 	// call the getPosts ApI
 	useGetPosts(setLoading);
 
@@ -29,7 +30,11 @@ const Feed = () => {
 	return (
 		<>
 			<FeedCreatePost />
-			{posts && posts.map((post) => <PostCard key={post._id} post={post} />)}
+			{searchText?.length > 0 ? (
+				<SearchContent />
+			) : (
+				posts && posts.map((post) => <PostCard key={post._id} post={post} />)
+			)}
 		</>
 	);
 };
