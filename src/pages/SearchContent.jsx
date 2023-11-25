@@ -11,6 +11,13 @@ const SearchContent = () => {
 	const fetchedData = useSelector((store) => store.config.searchedData);
 	console.log(fetchedData);
 
+	if (!fetchedData?.data)
+		return (
+			<div className='noPost'>
+				<h2 className='text-center text-red-400 text-3xl '>{fetchedData?.message}!</h2>
+			</div>
+		);
+
 	return (
 		<>
 			{fetchedData?.data?.map((item) => (

@@ -9,6 +9,7 @@ import SearchContent from "../pages/SearchContent";
 const Feed = () => {
 	const [loading, setLoading] = useState(false);
 	const searchText = useSelector((store) => store.config.searchText);
+
 	// call the getPosts ApI
 	useGetPosts(setLoading);
 

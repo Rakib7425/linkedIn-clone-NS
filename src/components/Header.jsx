@@ -34,7 +34,8 @@ const Header = () => {
 						<i className='material-icons -ml-3 mr-2'>search </i>
 						<input
 							type='text'
-							className='text-lg'
+							className='text-lg text-black'
+							placeholder='React'
 							onChange={(e) => setSearchTextLocal(e.target.value)}
 						/>
 					</div>
