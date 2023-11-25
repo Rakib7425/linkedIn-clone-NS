@@ -9,7 +9,7 @@ const SearchContent = () => {
 	useSearch(searchText);
 
 	const fetchedData = useSelector((store) => store.config.searchedData);
-	console.log(fetchedData);
+	// console.log(fetchedData);
 
 	if (!fetchedData?.data)
 		return (

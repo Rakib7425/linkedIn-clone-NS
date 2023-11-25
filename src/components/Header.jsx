@@ -21,8 +21,8 @@ const Header = () => {
 
 	return (
 		<>
-			<div className='header sticky w-screen flex items-center justify-center'>
-				<div className='header__left'>
+			<div className='header sticky w-screen flex items-center justify-center flex-col md:flex-row gap-5 md:gap-0'>
+				<div className='header__left pt-8 md:pt-0'>
 					<Link to={"/"}>
 						<img
 							className='cursor-pointer'

@@ -57,7 +57,7 @@ const FeedCreatePost = () => {
 						<i style={{ color: "#7fc15e" }} className='material-icons '>
 							calendar_view_day
 						</i>
-						<h4>Write Article</h4>
+						<h4>Article</h4>
 					</div>
 				</div>
 			</div>

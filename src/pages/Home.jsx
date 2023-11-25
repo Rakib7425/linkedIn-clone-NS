@@ -5,7 +5,7 @@ import SideBar from "../components/SideBar";
 const Home = () => {
 	return (
 		<div className='body__main mx-auto'>
-			<div className='sidebar '>
+			<div className='sidebar hidden md:block'>
 				<SideBar />
 			</div>
 
@@ -13,7 +13,7 @@ const Home = () => {
 				<Feed />
 			</div>
 
-			<div className='widgets'>
+			<div className='widgets hidden md:block'>
 				<RightSideBar />
 			</div>
 		</div>

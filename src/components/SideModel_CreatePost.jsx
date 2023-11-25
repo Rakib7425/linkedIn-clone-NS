@@ -51,6 +51,7 @@ const SideModel_CreatePost = () => {
 				title='Create a Post'
 				placement='right'
 				width={"40vw"}
+				// className='min-w-screen'
 				onClose={onClose}
 				open={isSideModel_open}
 			>

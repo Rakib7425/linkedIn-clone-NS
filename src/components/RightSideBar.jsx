@@ -11,7 +11,7 @@ const RightSideBar = () => {
 				</div>
 				<div className='widgets__articleRight'>
 					<h4>Coding LinkedIn Clone</h4>
-					<p>Top news - 4500 readers</p>
+					<p>Top news - 6900 readers</p>
 				</div>
 			</div>
 
