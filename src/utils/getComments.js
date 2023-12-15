@@ -16,7 +16,7 @@ const getComments = async (postId, userToken) => {
 
 	let data = await response.json();
 
-	console.log(data);
+	// console.log(data);
 	return data;
 };
 
