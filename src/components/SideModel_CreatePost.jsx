@@ -26,6 +26,7 @@ const SideModel_CreatePost = () => {
 			span: 16,
 		},
 	};
+
 	const beforeUpload = (file) => {
 		const isImage = file.type.startsWith("image/");
 		if (!isImage) {
