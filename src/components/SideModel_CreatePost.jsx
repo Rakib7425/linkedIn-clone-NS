@@ -36,6 +36,7 @@ const SideModel_CreatePost = () => {
 		setFile(file);
 		return isImage && false;
 	};
+
 	const onFinish = async (post) => {
 		// API call for create a post
 		const result = await createPost(post, file, userToken);
