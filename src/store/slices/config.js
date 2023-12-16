@@ -12,6 +12,7 @@ const configSlice = createSlice({
 
 	reducers: {
 		loginSignupModelOpen: (state) => {
+			
 			state.isLoginSignupModelOpen = !state.isLoginSignupModelOpen;
 		},
 		loginSignupModelClose: (state) => {
